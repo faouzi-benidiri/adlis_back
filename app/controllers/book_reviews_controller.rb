@@ -22,7 +22,7 @@ class BookReviewsController < ApplicationController
         book_review = params[:review]
       
         review = BookReview.create(user_id: user_id, book_id: book_id, user_username: user_username, review: book_review)
-        review_id = params[:id]
+        review_id = review.id
       
         render json: { message: "Critique stockée avec succès", review_id: review_id }
       end
