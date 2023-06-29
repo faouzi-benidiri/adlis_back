@@ -28825,3 +28825,870 @@ Processing by BookReviewsController#index as HTML
 Completed 200 OK in 13ms (Views: 2.5ms | ActiveRecord: 0.6ms | Allocations: 625)
 
 
+Started GET "/ws" for ::1 at 2023-06-29 15:34:01 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/ws" for ::1 at 2023-06-29 15:34:05 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started POST "/identity/password_reset" for 127.0.0.1 at 2023-06-29 15:34:13 +0200
+Processing by Identity::PasswordResetsController#create as HTML
+  Parameters: {"email"=>"foofooamazigh@gmail.com", "password_reset"=>{"email"=>"foofooamazigh@gmail.com"}}
+  [1m[36mUser Load (1.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."verified" = $2 LIMIT $3[0m  [["email", "foofooamazigh@gmail.com"], ["verified", true], ["LIMIT", 1]]
+  ↳ app/controllers/identity/password_resets_controller.rb:12:in `create'
+Completed 400 Bad Request in 36ms (Views: 0.7ms | ActiveRecord: 5.8ms | Allocations: 9289)
+
+
+Started GET "/ws" for ::1 at 2023-06-29 15:34:14 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started POST "/identity/password_reset" for 127.0.0.1 at 2023-06-29 15:34:25 +0200
+Processing by Identity::PasswordResetsController#create as HTML
+  Parameters: {"email"=>"foofooamazigh@gmail.com", "password_reset"=>{"email"=>"foofooamazigh@gmail.com"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."verified" = $2 LIMIT $3[0m  [["email", "foofooamazigh@gmail.com"], ["verified", true], ["LIMIT", 1]]
+  ↳ app/controllers/identity/password_resets_controller.rb:12:in `create'
+Completed 400 Bad Request in 3ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 561)
+
+
+Started GET "/ws" for ::1 at 2023-06-29 15:34:30 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/ws" for ::1 at 2023-06-29 15:35:02 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started POST "/identity/password_reset" for 127.0.0.1 at 2023-06-29 15:35:17 +0200
+Processing by Identity::PasswordResetsController#create as HTML
+  Parameters: {"email"=>"foofooamazigh@gmail.com", "password_reset"=>{"email"=>"foofooamazigh@gmail.com"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."verified" = $2 LIMIT $3[0m  [["email", "foofooamazigh@gmail.com"], ["verified", true], ["LIMIT", 1]]
+  ↳ app/controllers/identity/password_resets_controller.rb:12:in `create'
+Completed 400 Bad Request in 5ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 564)
+
+
+Started GET "/ws" for ::1 at 2023-06-29 15:36:06 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started POST "/identity/password_reset" for 127.0.0.1 at 2023-06-29 15:36:21 +0200
+Processing by Identity::PasswordResetsController#create as HTML
+  Parameters: {"email"=>"foofooamazigh@gmail.com", "password_reset"=>{"email"=>"foofooamazigh@gmail.com"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."verified" = $2 LIMIT $3[0m  [["email", "foofooamazigh@gmail.com"], ["verified", true], ["LIMIT", 1]]
+  ↳ app/controllers/identity/password_resets_controller.rb:12:in `create'
+Completed 400 Bad Request in 6ms (Views: 1.3ms | ActiveRecord: 0.7ms | Allocations: 547)
+
+
+Started POST "/identity/password_reset" for 127.0.0.1 at 2023-06-29 15:38:13 +0200
+Processing by Identity::PasswordResetsController#create as HTML
+  Parameters: {"email"=>"foofooamazigh@gmail.com", "password_reset"=>{"email"=>"foofooamazigh@gmail.com"}}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."verified" = $2 LIMIT $3[0m  [["email", "foofooamazigh@gmail.com"], ["verified", true], ["LIMIT", 1]]
+  ↳ app/controllers/identity/password_resets_controller.rb:12:in `create'
+[ActiveJob] Enqueued ActionMailer::MailDeliveryJob (Job ID: 2e171dff-6004-4852-b2bf-519d9abc31b8) to Async(default) with arguments: "UserMailer", "password_reset", "deliver_now", {:params=>{:user=>#<GlobalID:0x00007f27b5369d98 @uri=#<URI::GID gid://back/User/2>>}, :args=>[]}
+Completed 204 No Content in 59ms (ActiveRecord: 11.0ms | Allocations: 20431)
+
+
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2e171dff-6004-4852-b2bf-519d9abc31b8]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2e171dff-6004-4852-b2bf-519d9abc31b8] Performing ActionMailer::MailDeliveryJob (Job ID: 2e171dff-6004-4852-b2bf-519d9abc31b8) from Async(default) enqueued at 2023-06-29T13:38:13Z with arguments: "UserMailer", "password_reset", "deliver_now", {:params=>{:user=>#<GlobalID:0x00007f27b5389968 @uri=#<URI::GID gid://back/User/2>>}, :args=>[]}
+Started GET "/static/media/image2.e25c19834fb110e4cb0b.jpg" for ::1 at 2023-06-29 15:38:13 +0200
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2e171dff-6004-4852-b2bf-519d9abc31b8]   [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2e171dff-6004-4852-b2bf-519d9abc31b8]   ↳ app/mailers/user_mailer.rb:4:in `password_reset'
+Started GET "/static/media/image1.39d551b8d0ee87d6873f.jpg" for ::1 at 2023-06-29 15:38:13 +0200
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2e171dff-6004-4852-b2bf-519d9abc31b8]   [1m[36mPasswordResetToken Create (13.0ms)[0m  [1m[32mINSERT INTO "password_reset_tokens" ("user_id") VALUES ($1) RETURNING "id"[0m  [["user_id", 2]]
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2e171dff-6004-4852-b2bf-519d9abc31b8]   ↳ app/mailers/user_mailer.rb:4:in `password_reset'
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2e171dff-6004-4852-b2bf-519d9abc31b8]   [1m[36mTRANSACTION (6.3ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2e171dff-6004-4852-b2bf-519d9abc31b8]   ↳ app/mailers/user_mailer.rb:4:in `password_reset'
+Started GET "/static/media/image3.99a1d8a4dd169224e97e.jpg" for ::1 at 2023-06-29 15:38:13 +0200
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2e171dff-6004-4852-b2bf-519d9abc31b8]   Rendering layout layouts/mailer.html.erb
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2e171dff-6004-4852-b2bf-519d9abc31b8]   Rendering user_mailer/password_reset.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2e171dff-6004-4852-b2bf-519d9abc31b8]   Rendered user_mailer/password_reset.html.erb within layouts/mailer (Duration: 7.2ms | Allocations: 361)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2e171dff-6004-4852-b2bf-519d9abc31b8]   Rendered layout layouts/mailer.html.erb (Duration: 17.8ms | Allocations: 712)
+  
+ActionController::RoutingError (No route matches [GET] "/static/media/image2.e25c19834fb110e4cb0b.jpg"):
+  
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2e171dff-6004-4852-b2bf-519d9abc31b8] UserMailer#password_reset: processed outbound mail in 250.4ms
+  
+ActionController::RoutingError (No route matches [GET] "/static/media/image1.39d551b8d0ee87d6873f.jpg"):
+  
+  
+ActionController::RoutingError (No route matches [GET] "/static/media/image3.99a1d8a4dd169224e97e.jpg"):
+  
+Started GET "/static/media/Nopicture.8e80e76d6f2e595c4b47.jpg" for ::1 at 2023-06-29 15:38:13 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/static/media/Nopicture.8e80e76d6f2e595c4b47.jpg"):
+  
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2e171dff-6004-4852-b2bf-519d9abc31b8] Delivered mail 649d8945622a3_58c75578-43@akvayli.mail (919.4ms)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2e171dff-6004-4852-b2bf-519d9abc31b8] Date: Thu, 29 Jun 2023 15:38:13 +0200
+From: adlisbook.contact@gmail.com
+To: foofooamazigh@gmail.com
+Message-ID: <649d8945622a3_58c75578-43@akvayli.mail>
+Subject: Reset your password
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <p>Hey there,</p>
+
+<p>Can't remember your password for <strong>foofooamazigh@gmail.com</strong>? That's OK, it happens. Just hit the link below to set a new one.</p>
+
+<p><a href="http://localhost:3000/identity/password_reset/edit?sid=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik1RPT0iLCJleHAiOiIyMDIzLTA2LTI5VDEzOjU4OjEzLjMxMFoiLCJwdXIiOiJwYXNzd29yZF9yZXNldF90b2tlbiJ9fQ%3D%3D--40b5dcab3279dcf533a3f67a2f1bddc1f266f501b50c0e292e98861bd79d0781">Reset my password</a></p>
+
+<p>If you did not request a password reset you can safely ignore this email, it expires in 20 minutes. Only someone with access to this email account can reset your password.</p>
+
+<hr>
+
+<p>Have questions or need help? Just reply to this email and our support team will help you sort it out.</p>
+
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2e171dff-6004-4852-b2bf-519d9abc31b8] Performed ActionMailer::MailDeliveryJob (Job ID: 2e171dff-6004-4852-b2bf-519d9abc31b8) from Async(default) in 1181.84ms
+Started GET "/ws" for ::1 at 2023-06-29 15:38:14 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/identity/password_reset/edit?sid=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik1RPT0iLCJleHAiOiIyMDIzLTA2LTI5VDEzOjU4OjEzLjMxMFoiLCJwdXIiOiJwYXNzd29yZF9yZXNldF90b2tlbiJ9fQ%3D%3D--40b5dcab3279dcf533a3f67a2f1bddc1f266f501b50c0e292e98861bd79d0781" for ::1 at 2023-06-29 15:38:50 +0200
+Processing by Identity::PasswordResetsController#edit as HTML
+  Parameters: {"sid"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik1RPT0iLCJleHAiOiIyMDIzLTA2LTI5VDEzOjU4OjEzLjMxMFoiLCJwdXIiOiJwYXNzd29yZF9yZXNldF90b2tlbiJ9fQ==--40b5dcab3279dcf533a3f67a2f1bddc1f266f501b50c0e292e98861bd79d0781"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 75)
+
+
+Started GET "/identity/password_reset/edit?sid=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik1RPT0iLCJleHAiOiIyMDIzLTA2LTI5VDEzOjU4OjEzLjMxMFoiLCJwdXIiOiJwYXNzd29yZF9yZXNldF90b2tlbiJ9fQ%3D%3D--40b5dcab3279dcf533a3f67a2f1bddc1f266f501b50c0e292e98861bd79d0781" for ::1 at 2023-06-29 15:42:03 +0200
+Processing by Identity::PasswordResetsController#edit as HTML
+  Parameters: {"sid"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik1RPT0iLCJleHAiOiIyMDIzLTA2LTI5VDEzOjU4OjEzLjMxMFoiLCJwdXIiOiJwYXNzd29yZF9yZXNldF90b2tlbiJ9fQ==--40b5dcab3279dcf533a3f67a2f1bddc1f266f501b50c0e292e98861bd79d0781"}
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 344)
+
+
+Started GET "/ws" for ::1 at 2023-06-29 15:42:31 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/book_reviews?book_id=xS8DzwEACAAJ" for 127.0.0.1 at 2023-06-29 15:45:58 +0200
+Processing by BookReviewsController#index as HTML
+  Parameters: {"book_id"=>"xS8DzwEACAAJ"}
+  [1m[36mBookReview Pluck (1.1ms)[0m  [1m[34mSELECT "book_reviews"."id", "book_reviews"."user_id", "book_reviews"."user_username", "book_reviews"."review" FROM "book_reviews" WHERE "book_reviews"."book_id" = $1[0m  [["book_id", "xS8DzwEACAAJ"]]
+  ↳ app/controllers/book_reviews_controller.rb:6:in `index'
+Completed 200 OK in 10ms (Views: 0.2ms | ActiveRecord: 2.6ms | Allocations: 1843)
+
+
+Started GET "/book_reviews?book_id=xS8DzwEACAAJ" for 127.0.0.1 at 2023-06-29 15:45:58 +0200
+Processing by BookReviewsController#index as HTML
+  Parameters: {"book_id"=>"xS8DzwEACAAJ"}
+  [1m[36mBookReview Pluck (0.9ms)[0m  [1m[34mSELECT "book_reviews"."id", "book_reviews"."user_id", "book_reviews"."user_username", "book_reviews"."review" FROM "book_reviews" WHERE "book_reviews"."book_id" = $1[0m  [["book_id", "xS8DzwEACAAJ"]]
+  ↳ app/controllers/book_reviews_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 583)
+
+
+Started GET "/ws" for ::1 at 2023-06-29 15:51:04 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
+Started GET "/book_reviews?book_id=xS8DzwEACAAJ" for 127.0.0.1 at 2023-06-29 15:52:27 +0200
+Processing by BookReviewsController#index as HTML
+  Parameters: {"book_id"=>"xS8DzwEACAAJ"}
+  [1m[36mBookReview Pluck (1.0ms)[0m  [1m[34mSELECT "book_reviews"."id", "book_reviews"."user_id", "book_reviews"."user_username", "book_reviews"."review" FROM "book_reviews" WHERE "book_reviews"."book_id" = $1[0m  [["book_id", "xS8DzwEACAAJ"]]
+  ↳ app/controllers/book_reviews_controller.rb:6:in `index'
+Completed 200 OK in 48ms (Views: 0.5ms | ActiveRecord: 19.9ms | Allocations: 3529)
+
+
+Started GET "/book_reviews?book_id=xS8DzwEACAAJ" for 127.0.0.1 at 2023-06-29 15:52:27 +0200
+Processing by BookReviewsController#index as HTML
+  Parameters: {"book_id"=>"xS8DzwEACAAJ"}
+  [1m[36mBookReview Pluck (0.8ms)[0m  [1m[34mSELECT "book_reviews"."id", "book_reviews"."user_id", "book_reviews"."user_username", "book_reviews"."review" FROM "book_reviews" WHERE "book_reviews"."book_id" = $1[0m  [["book_id", "xS8DzwEACAAJ"]]
+  ↳ app/controllers/book_reviews_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 583)
+
+
+Started GET "/book_reviews?book_id=xS8DzwEACAAJ" for 127.0.0.1 at 2023-06-29 15:52:53 +0200
+Processing by BookReviewsController#index as HTML
+  Parameters: {"book_id"=>"xS8DzwEACAAJ"}
+  [1m[36mBookReview Pluck (0.7ms)[0m  [1m[34mSELECT "book_reviews"."id", "book_reviews"."user_id", "book_reviews"."user_username", "book_reviews"."review" FROM "book_reviews" WHERE "book_reviews"."book_id" = $1[0m  [["book_id", "xS8DzwEACAAJ"]]
+  ↳ app/controllers/book_reviews_controller.rb:6:in `index'
+Completed 200 OK in 8ms (Views: 0.7ms | ActiveRecord: 0.7ms | Allocations: 583)
+
+
+Started GET "/book_reviews?book_id=xS8DzwEACAAJ" for 127.0.0.1 at 2023-06-29 15:52:53 +0200
+Processing by BookReviewsController#index as HTML
+  Parameters: {"book_id"=>"xS8DzwEACAAJ"}
+  [1m[36mBookReview Pluck (1.1ms)[0m  [1m[34mSELECT "book_reviews"."id", "book_reviews"."user_id", "book_reviews"."user_username", "book_reviews"."review" FROM "book_reviews" WHERE "book_reviews"."book_id" = $1[0m  [["book_id", "xS8DzwEACAAJ"]]
+  ↳ app/controllers/book_reviews_controller.rb:6:in `index'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 1.1ms | Allocations: 583)
+
+
+Started GET "/book_reviews?book_id=xS8DzwEACAAJ" for 127.0.0.1 at 2023-06-29 15:52:55 +0200
+Processing by BookReviewsController#index as HTML
+  Parameters: {"book_id"=>"xS8DzwEACAAJ"}
+  [1m[36mBookReview Pluck (0.8ms)[0m  [1m[34mSELECT "book_reviews"."id", "book_reviews"."user_id", "book_reviews"."user_username", "book_reviews"."review" FROM "book_reviews" WHERE "book_reviews"."book_id" = $1[0m  [["book_id", "xS8DzwEACAAJ"]]
+  ↳ app/controllers/book_reviews_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.8ms | Allocations: 583)
+
+
+Started GET "/book_reviews?book_id=xS8DzwEACAAJ" for 127.0.0.1 at 2023-06-29 15:52:55 +0200
+Processing by BookReviewsController#index as HTML
+  Parameters: {"book_id"=>"xS8DzwEACAAJ"}
+  [1m[36mBookReview Pluck (0.7ms)[0m  [1m[34mSELECT "book_reviews"."id", "book_reviews"."user_id", "book_reviews"."user_username", "book_reviews"."review" FROM "book_reviews" WHERE "book_reviews"."book_id" = $1[0m  [["book_id", "xS8DzwEACAAJ"]]
+  ↳ app/controllers/book_reviews_controller.rb:6:in `index'
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.7ms | Allocations: 583)
+
+
+Started GET "/book_reviews?book_id=xS8DzwEACAAJ" for 127.0.0.1 at 2023-06-29 15:54:12 +0200
+Processing by BookReviewsController#index as HTML
+  Parameters: {"book_id"=>"xS8DzwEACAAJ"}
+  [1m[36mBookReview Pluck (0.4ms)[0m  [1m[34mSELECT "book_reviews"."id", "book_reviews"."user_id", "book_reviews"."user_username", "book_reviews"."review" FROM "book_reviews" WHERE "book_reviews"."book_id" = $1[0m  [["book_id", "xS8DzwEACAAJ"]]
+  ↳ app/controllers/book_reviews_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 583)
+
+
+Started GET "/book_reviews?book_id=xS8DzwEACAAJ" for 127.0.0.1 at 2023-06-29 15:54:12 +0200
+Processing by BookReviewsController#index as HTML
+  Parameters: {"book_id"=>"xS8DzwEACAAJ"}
+  [1m[36mBookReview Pluck (0.4ms)[0m  [1m[34mSELECT "book_reviews"."id", "book_reviews"."user_id", "book_reviews"."user_username", "book_reviews"."review" FROM "book_reviews" WHERE "book_reviews"."book_id" = $1[0m  [["book_id", "xS8DzwEACAAJ"]]
+  ↳ app/controllers/book_reviews_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 583)
+
+
+Started GET "/book_reviews?book_id=xS8DzwEACAAJ" for 127.0.0.1 at 2023-06-29 15:54:44 +0200
+Processing by BookReviewsController#index as HTML
+  Parameters: {"book_id"=>"xS8DzwEACAAJ"}
+  [1m[36mBookReview Pluck (0.5ms)[0m  [1m[34mSELECT "book_reviews"."id", "book_reviews"."user_id", "book_reviews"."user_username", "book_reviews"."review" FROM "book_reviews" WHERE "book_reviews"."book_id" = $1[0m  [["book_id", "xS8DzwEACAAJ"]]
+  ↳ app/controllers/book_reviews_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 583)
+
+
+Started GET "/book_reviews?book_id=xS8DzwEACAAJ" for 127.0.0.1 at 2023-06-29 15:54:44 +0200
+Processing by BookReviewsController#index as HTML
+  Parameters: {"book_id"=>"xS8DzwEACAAJ"}
+  [1m[36mBookReview Pluck (0.4ms)[0m  [1m[34mSELECT "book_reviews"."id", "book_reviews"."user_id", "book_reviews"."user_username", "book_reviews"."review" FROM "book_reviews" WHERE "book_reviews"."book_id" = $1[0m  [["book_id", "xS8DzwEACAAJ"]]
+  ↳ app/controllers/book_reviews_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 583)
+
+
+Started GET "/book_reviews?book_id=xS8DzwEACAAJ" for 127.0.0.1 at 2023-06-29 15:54:48 +0200
+Processing by BookReviewsController#index as HTML
+  Parameters: {"book_id"=>"xS8DzwEACAAJ"}
+  [1m[36mBookReview Pluck (0.5ms)[0m  [1m[34mSELECT "book_reviews"."id", "book_reviews"."user_id", "book_reviews"."user_username", "book_reviews"."review" FROM "book_reviews" WHERE "book_reviews"."book_id" = $1[0m  [["book_id", "xS8DzwEACAAJ"]]
+  ↳ app/controllers/book_reviews_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 583)
+
+
+Started GET "/book_reviews?book_id=xS8DzwEACAAJ" for 127.0.0.1 at 2023-06-29 15:54:48 +0200
+Processing by BookReviewsController#index as HTML
+  Parameters: {"book_id"=>"xS8DzwEACAAJ"}
+  [1m[36mBookReview Pluck (0.6ms)[0m  [1m[34mSELECT "book_reviews"."id", "book_reviews"."user_id", "book_reviews"."user_username", "book_reviews"."review" FROM "book_reviews" WHERE "book_reviews"."book_id" = $1[0m  [["book_id", "xS8DzwEACAAJ"]]
+  ↳ app/controllers/book_reviews_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 583)
+
+
+Started GET "/book_reviews?book_id=xS8DzwEACAAJ" for 127.0.0.1 at 2023-06-29 15:55:19 +0200
+Processing by BookReviewsController#index as HTML
+  Parameters: {"book_id"=>"xS8DzwEACAAJ"}
+  [1m[36mBookReview Pluck (0.5ms)[0m  [1m[34mSELECT "book_reviews"."id", "book_reviews"."user_id", "book_reviews"."user_username", "book_reviews"."review" FROM "book_reviews" WHERE "book_reviews"."book_id" = $1[0m  [["book_id", "xS8DzwEACAAJ"]]
+  ↳ app/controllers/book_reviews_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 583)
+
+
+Started GET "/book_reviews?book_id=xS8DzwEACAAJ" for 127.0.0.1 at 2023-06-29 15:55:19 +0200
+Processing by BookReviewsController#index as HTML
+  Parameters: {"book_id"=>"xS8DzwEACAAJ"}
+  [1m[36mBookReview Pluck (0.5ms)[0m  [1m[34mSELECT "book_reviews"."id", "book_reviews"."user_id", "book_reviews"."user_username", "book_reviews"."review" FROM "book_reviews" WHERE "book_reviews"."book_id" = $1[0m  [["book_id", "xS8DzwEACAAJ"]]
+  ↳ app/controllers/book_reviews_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 583)
+
+
+Started GET "/book_reviews?book_id=xS8DzwEACAAJ" for 127.0.0.1 at 2023-06-29 15:57:29 +0200
+Processing by BookReviewsController#index as HTML
+  Parameters: {"book_id"=>"xS8DzwEACAAJ"}
+  [1m[36mBookReview Pluck (0.4ms)[0m  [1m[34mSELECT "book_reviews"."id", "book_reviews"."user_id", "book_reviews"."user_username", "book_reviews"."review" FROM "book_reviews" WHERE "book_reviews"."book_id" = $1[0m  [["book_id", "xS8DzwEACAAJ"]]
+  ↳ app/controllers/book_reviews_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 583)
+
+
+Started GET "/book_reviews?book_id=xS8DzwEACAAJ" for 127.0.0.1 at 2023-06-29 15:57:29 +0200
+Processing by BookReviewsController#index as HTML
+  Parameters: {"book_id"=>"xS8DzwEACAAJ"}
+  [1m[36mBookReview Pluck (0.5ms)[0m  [1m[34mSELECT "book_reviews"."id", "book_reviews"."user_id", "book_reviews"."user_username", "book_reviews"."review" FROM "book_reviews" WHERE "book_reviews"."book_id" = $1[0m  [["book_id", "xS8DzwEACAAJ"]]
+  ↳ app/controllers/book_reviews_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 583)
+
+
+Started GET "/book_reviews?book_id=xS8DzwEACAAJ" for 127.0.0.1 at 2023-06-29 16:07:25 +0200
+Processing by BookReviewsController#index as HTML
+  Parameters: {"book_id"=>"xS8DzwEACAAJ"}
+  [1m[36mBookReview Pluck (0.8ms)[0m  [1m[34mSELECT "book_reviews"."id", "book_reviews"."user_id", "book_reviews"."user_username", "book_reviews"."review" FROM "book_reviews" WHERE "book_reviews"."book_id" = $1[0m  [["book_id", "xS8DzwEACAAJ"]]
+  ↳ app/controllers/book_reviews_controller.rb:6:in `index'
+Completed 200 OK in 28ms (Views: 0.3ms | ActiveRecord: 10.8ms | Allocations: 3475)
+
+
+Started GET "/book_reviews?book_id=xS8DzwEACAAJ" for 127.0.0.1 at 2023-06-29 16:07:25 +0200
+Processing by BookReviewsController#index as HTML
+  Parameters: {"book_id"=>"xS8DzwEACAAJ"}
+  [1m[36mBookReview Pluck (0.5ms)[0m  [1m[34mSELECT "book_reviews"."id", "book_reviews"."user_id", "book_reviews"."user_username", "book_reviews"."review" FROM "book_reviews" WHERE "book_reviews"."book_id" = $1[0m  [["book_id", "xS8DzwEACAAJ"]]
+  ↳ app/controllers/book_reviews_controller.rb:6:in `index'
+Completed 200 OK in 5ms (Views: 0.2ms | ActiveRecord: 0.5ms | Allocations: 583)
+
+
+Started POST "/sign_in" for 127.0.0.1 at 2023-06-29 16:07:41 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"foofooamazigh@gmail.com", "password"=>"[FILTERED]", "session"=>{}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "foofooamazigh@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:19:in `create'
+Completed 401 Unauthorized in 320ms (Views: 0.3ms | ActiveRecord: 8.2ms | Allocations: 7050)
+
+
+Started POST "/sign_in" for 127.0.0.1 at 2023-06-29 16:07:48 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"foofooamazigh@gmail.com", "password"=>"[FILTERED]", "session"=>{}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "foofooamazigh@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sessions_controller.rb:22:in `create'
+  [1m[36mSession Create (1.4ms)[0m  [1m[32mINSERT INTO "sessions" ("expires_at", "user_id", "user_agent", "ip_address", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["expires_at", "2023-06-29 17:07:48.790585"], ["user_id", 2], ["user_agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"], ["ip_address", "127.0.0.1"], ["created_at", "2023-06-29 14:07:48.804542"], ["updated_at", "2023-06-29 14:07:48.804542"]]
+  ↳ app/controllers/sessions_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sessions_controller.rb:22:in `create'
+Completed 201 Created in 286ms (Views: 0.2ms | ActiveRecord: 5.5ms | Allocations: 17238)
+
+
+Started GET "/book_reviews?book_id=IJmdy8Er9EgC" for 127.0.0.1 at 2023-06-29 16:07:51 +0200
+Processing by BookReviewsController#index as HTML
+  Parameters: {"book_id"=>"IJmdy8Er9EgC"}
+  [1m[36mBookReview Pluck (0.4ms)[0m  [1m[34mSELECT "book_reviews"."id", "book_reviews"."user_id", "book_reviews"."user_username", "book_reviews"."review" FROM "book_reviews" WHERE "book_reviews"."book_id" = $1[0m  [["book_id", "IJmdy8Er9EgC"]]
+  ↳ app/controllers/book_reviews_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 630)
+
+
+Started GET "/book_reviews?book_id=IJmdy8Er9EgC" for 127.0.0.1 at 2023-06-29 16:07:51 +0200
+Processing by BookReviewsController#index as HTML
+  Parameters: {"book_id"=>"IJmdy8Er9EgC"}
+  [1m[36mBookReview Pluck (0.5ms)[0m  [1m[34mSELECT "book_reviews"."id", "book_reviews"."user_id", "book_reviews"."user_username", "book_reviews"."review" FROM "book_reviews" WHERE "book_reviews"."book_id" = $1[0m  [["book_id", "IJmdy8Er9EgC"]]
+  ↳ app/controllers/book_reviews_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 625)
+
+
+Started DELETE "/book_reviews/895" for 127.0.0.1 at 2023-06-29 16:10:00 +0200
+Processing by BookReviewsController#destroy as HTML
+  Parameters: {"id"=>"895"}
+  [1m[36mSession Load (0.6ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `block in authenticate'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/current.rb:6:in `session='
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:14:in `authenticate'
+  [1m[36mSession Update (0.9ms)[0m  [1m[33mUPDATE "sessions" SET "expires_at" = $1, "updated_at" = $2 WHERE "sessions"."id" = $3[0m  [["expires_at", "2023-06-29 17:10:00.176669"], ["updated_at", "2023-06-29 14:10:00.178271"], ["id", 24]]
+  ↳ app/controllers/application_controller.rb:14:in `authenticate'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/application_controller.rb:14:in `authenticate'
+  [1m[36mBookReview Load (0.7ms)[0m  [1m[34mSELECT "book_reviews".* FROM "book_reviews" WHERE "book_reviews"."id" = $1 LIMIT $2[0m  [["id", 895], ["LIMIT", 1]]
+  ↳ app/controllers/book_reviews_controller.rb:32:in `destroy'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/book_reviews_controller.rb:35:in `destroy'
+  [1m[36mBookReview Destroy (0.7ms)[0m  [1m[31mDELETE FROM "book_reviews" WHERE "book_reviews"."id" = $1[0m  [["id", 895]]
+  ↳ app/controllers/book_reviews_controller.rb:35:in `destroy'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/book_reviews_controller.rb:35:in `destroy'
+Completed 200 OK in 49ms (Views: 0.2ms | ActiveRecord: 11.3ms | Allocations: 19511)
+
+
+Started GET "/book_reviews?book_id=IJmdy8Er9EgC" for 127.0.0.1 at 2023-06-29 16:10:00 +0200
+Processing by BookReviewsController#index as HTML
+  Parameters: {"book_id"=>"IJmdy8Er9EgC"}
+  [1m[36mBookReview Pluck (0.6ms)[0m  [1m[34mSELECT "book_reviews"."id", "book_reviews"."user_id", "book_reviews"."user_username", "book_reviews"."review" FROM "book_reviews" WHERE "book_reviews"."book_id" = $1[0m  [["book_id", "IJmdy8Er9EgC"]]
+  ↳ app/controllers/book_reviews_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.6ms | Allocations: 604)
+
+
+Started DELETE "/book_reviews/896" for 127.0.0.1 at 2023-06-29 16:10:01 +0200
+Processing by BookReviewsController#destroy as HTML
+  Parameters: {"id"=>"896"}
+  [1m[36mSession Load (0.4ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `block in authenticate'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/current.rb:6:in `session='
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:14:in `authenticate'
+  [1m[36mSession Update (0.4ms)[0m  [1m[33mUPDATE "sessions" SET "expires_at" = $1, "updated_at" = $2 WHERE "sessions"."id" = $3[0m  [["expires_at", "2023-06-29 17:10:01.360305"], ["updated_at", "2023-06-29 14:10:01.360936"], ["id", 24]]
+  ↳ app/controllers/application_controller.rb:14:in `authenticate'
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/application_controller.rb:14:in `authenticate'
+  [1m[36mBookReview Load (0.4ms)[0m  [1m[34mSELECT "book_reviews".* FROM "book_reviews" WHERE "book_reviews"."id" = $1 LIMIT $2[0m  [["id", 896], ["LIMIT", 1]]
+  ↳ app/controllers/book_reviews_controller.rb:32:in `destroy'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/book_reviews_controller.rb:35:in `destroy'
+  [1m[36mBookReview Destroy (0.5ms)[0m  [1m[31mDELETE FROM "book_reviews" WHERE "book_reviews"."id" = $1[0m  [["id", 896]]
+  ↳ app/controllers/book_reviews_controller.rb:35:in `destroy'
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/book_reviews_controller.rb:35:in `destroy'
+Completed 200 OK in 20ms (Views: 0.2ms | ActiveRecord: 6.9ms | Allocations: 4685)
+
+
+Started GET "/book_reviews?book_id=IJmdy8Er9EgC" for 127.0.0.1 at 2023-06-29 16:10:01 +0200
+Processing by BookReviewsController#index as HTML
+  Parameters: {"book_id"=>"IJmdy8Er9EgC"}
+  [1m[36mBookReview Pluck (0.4ms)[0m  [1m[34mSELECT "book_reviews"."id", "book_reviews"."user_id", "book_reviews"."user_username", "book_reviews"."review" FROM "book_reviews" WHERE "book_reviews"."book_id" = $1[0m  [["book_id", "IJmdy8Er9EgC"]]
+  ↳ app/controllers/book_reviews_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 583)
+
+
+Started POST "/book_reviews" for 127.0.0.1 at 2023-06-29 16:11:02 +0200
+Processing by BookReviewsController#create as HTML
+  Parameters: {"review"=>"rhegttfshjgfdjhfgh", "book_id"=>"IJmdy8Er9EgC", "book_review"=>{"book_id"=>"IJmdy8Er9EgC", "review"=>"rhegttfshjgfdjhfgh"}}
+  [1m[36mSession Load (0.4ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `block in authenticate'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/current.rb:6:in `session='
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:14:in `authenticate'
+  [1m[36mSession Update (0.7ms)[0m  [1m[33mUPDATE "sessions" SET "expires_at" = $1, "updated_at" = $2 WHERE "sessions"."id" = $3[0m  [["expires_at", "2023-06-29 17:11:02.200234"], ["updated_at", "2023-06-29 14:11:02.200844"], ["id", 24]]
+  ↳ app/controllers/application_controller.rb:14:in `authenticate'
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/application_controller.rb:14:in `authenticate'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/book_reviews_controller.rb:24:in `create'
+  [1m[36mBookReview Create (1.6ms)[0m  [1m[32mINSERT INTO "book_reviews" ("book_id", "user_id", "user_username", "review", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["book_id", "IJmdy8Er9EgC"], ["user_id", 2], ["user_username", "akvayli"], ["review", "rhegttfshjgfdjhfgh"], ["created_at", "2023-06-29 14:11:02.211018"], ["updated_at", "2023-06-29 14:11:02.211018"]]
+  ↳ app/controllers/book_reviews_controller.rb:24:in `create'
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/book_reviews_controller.rb:24:in `create'
+Completed 200 OK in 27ms (Views: 0.5ms | ActiveRecord: 7.7ms | Allocations: 4717)
+
+
+Started GET "/book_reviews?book_id=IJmdy8Er9EgC" for 127.0.0.1 at 2023-06-29 16:11:02 +0200
+Processing by BookReviewsController#index as HTML
+  Parameters: {"book_id"=>"IJmdy8Er9EgC"}
+  [1m[36mBookReview Pluck (0.5ms)[0m  [1m[34mSELECT "book_reviews"."id", "book_reviews"."user_id", "book_reviews"."user_username", "book_reviews"."review" FROM "book_reviews" WHERE "book_reviews"."book_id" = $1[0m  [["book_id", "IJmdy8Er9EgC"]]
+  ↳ app/controllers/book_reviews_controller.rb:6:in `index'
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 604)
+
+
+Started DELETE "/sessions/24" for 127.0.0.1 at 2023-06-29 16:13:14 +0200
+Processing by SessionsController#destroy as HTML
+  Parameters: {"id"=>"24"}
+  [1m[36mSession Load (0.5ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."id" = $1 LIMIT $2[0m  [["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9:in `block in authenticate'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/models/current.rb:6:in `session='
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/application_controller.rb:14:in `authenticate'
+  [1m[36mSession Update (0.5ms)[0m  [1m[33mUPDATE "sessions" SET "expires_at" = $1, "updated_at" = $2 WHERE "sessions"."id" = $3[0m  [["expires_at", "2023-06-29 17:13:14.694771"], ["updated_at", "2023-06-29 14:13:14.695444"], ["id", 24]]
+  ↳ app/controllers/application_controller.rb:14:in `authenticate'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/application_controller.rb:14:in `authenticate'
+  [1m[36mSession Load (0.4ms)[0m  [1m[34mSELECT "sessions".* FROM "sessions" WHERE "sessions"."user_id" = $1 AND "sessions"."id" = $2 LIMIT $3[0m  [["user_id", 2], ["id", 24], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:41:in `set_session'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sessions_controller.rb:34:in `destroy'
+  [1m[36mSession Destroy (0.5ms)[0m  [1m[31mDELETE FROM "sessions" WHERE "sessions"."id" = $1[0m  [["id", 24]]
+  ↳ app/controllers/sessions_controller.rb:34:in `destroy'
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sessions_controller.rb:34:in `destroy'
+Completed 200 OK in 23ms (Views: 0.2ms | ActiveRecord: 6.3ms | Allocations: 5068)
+
+
+Started GET "/book_reviews?book_id=IJmdy8Er9EgC" for 127.0.0.1 at 2023-06-29 16:15:52 +0200
+Processing by BookReviewsController#index as HTML
+  Parameters: {"book_id"=>"IJmdy8Er9EgC"}
+  [1m[36mBookReview Pluck (0.4ms)[0m  [1m[34mSELECT "book_reviews"."id", "book_reviews"."user_id", "book_reviews"."user_username", "book_reviews"."review" FROM "book_reviews" WHERE "book_reviews"."book_id" = $1[0m  [["book_id", "IJmdy8Er9EgC"]]
+  ↳ app/controllers/book_reviews_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 604)
+
+
+Started GET "/book_reviews?book_id=IJmdy8Er9EgC" for 127.0.0.1 at 2023-06-29 16:15:52 +0200
+Processing by BookReviewsController#index as HTML
+  Parameters: {"book_id"=>"IJmdy8Er9EgC"}
+  [1m[36mBookReview Pluck (0.3ms)[0m  [1m[34mSELECT "book_reviews"."id", "book_reviews"."user_id", "book_reviews"."user_username", "book_reviews"."review" FROM "book_reviews" WHERE "book_reviews"."book_id" = $1[0m  [["book_id", "IJmdy8Er9EgC"]]
+  ↳ app/controllers/book_reviews_controller.rb:6:in `index'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 604)
+
+
+Started GET "/identity/password_reset/edit?sid=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik1RPT0iLCJleHAiOiIyMDIzLTA2LTI5VDEzOjU4OjEzLjMxMFoiLCJwdXIiOiJwYXNzd29yZF9yZXNldF90b2tlbiJ9fQ%3D%3D--40b5dcab3279dcf533a3f67a2f1bddc1f266f501b50c0e292e98861bd79d0781" for ::1 at 2023-06-29 16:56:06 +0200
+Processing by Identity::PasswordResetsController#edit as HTML
+  Parameters: {"sid"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik1RPT0iLCJleHAiOiIyMDIzLTA2LTI5VDEzOjU4OjEzLjMxMFoiLCJwdXIiOiJwYXNzd29yZF9yZXNldF90b2tlbiJ9fQ==--40b5dcab3279dcf533a3f67a2f1bddc1f266f501b50c0e292e98861bd79d0781"}
+Completed 200 OK in 1ms (Views: 0.2ms | Allocations: 66)
+
+
+Started GET "/identity/password_reset/edit?sid=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik1RPT0iLCJleHAiOiIyMDIzLTA2LTI5VDEzOjU4OjEzLjMxMFoiLCJwdXIiOiJwYXNzd29yZF9yZXNldF90b2tlbiJ9fQ%3D%3D--40b5dcab3279dcf533a3f67a2f1bddc1f266f501b50c0e292e98861bd79d0781" for ::1 at 2023-06-29 17:05:39 +0200
+Processing by Identity::PasswordResetsController#edit as HTML
+  Parameters: {"sid"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik1RPT0iLCJleHAiOiIyMDIzLTA2LTI5VDEzOjU4OjEzLjMxMFoiLCJwdXIiOiJwYXNzd29yZF9yZXNldF90b2tlbiJ9fQ==--40b5dcab3279dcf533a3f67a2f1bddc1f266f501b50c0e292e98861bd79d0781"}
+Redirected to http://localhost:3000//resetpassword/edit?sid=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik1RPT0iLCJleHAiOiIyMDIzLTA2LTI5VDEzOjU4OjEzLjMxMFoiLCJwdXIiOiJwYXNzd29yZF9yZXNldF90b2tlbiJ9fQ==--40b5dcab3279dcf533a3f67a2f1bddc1f266f501b50c0e292e98861bd79d0781
+Completed 302 Found in 5ms (Allocations: 407)
+
+
+Started GET "//resetpassword/edit?sid=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik1RPT0iLCJleHAiOiIyMDIzLTA2LTI5VDEzOjU4OjEzLjMxMFoiLCJwdXIiOiJwYXNzd29yZF9yZXNldF90b2tlbiJ9fQ==--40b5dcab3279dcf533a3f67a2f1bddc1f266f501b50c0e292e98861bd79d0781" for ::1 at 2023-06-29 17:05:39 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/resetpassword/edit"):
+  
+Started GET "/identity/password_reset/edit?sid=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik1RPT0iLCJleHAiOiIyMDIzLTA2LTI5VDEzOjU4OjEzLjMxMFoiLCJwdXIiOiJwYXNzd29yZF9yZXNldF90b2tlbiJ9fQ%3D%3D--40b5dcab3279dcf533a3f67a2f1bddc1f266f501b50c0e292e98861bd79d0781" for ::1 at 2023-06-29 17:06:04 +0200
+Processing by Identity::PasswordResetsController#edit as HTML
+  Parameters: {"sid"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik1RPT0iLCJleHAiOiIyMDIzLTA2LTI5VDEzOjU4OjEzLjMxMFoiLCJwdXIiOiJwYXNzd29yZF9yZXNldF90b2tlbiJ9fQ==--40b5dcab3279dcf533a3f67a2f1bddc1f266f501b50c0e292e98861bd79d0781"}
+Redirected to http://localhost:3001/resetpassword/edit?sid=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik1RPT0iLCJleHAiOiIyMDIzLTA2LTI5VDEzOjU4OjEzLjMxMFoiLCJwdXIiOiJwYXNzd29yZF9yZXNldF90b2tlbiJ9fQ==--40b5dcab3279dcf533a3f67a2f1bddc1f266f501b50c0e292e98861bd79d0781
+Completed 302 Found in 3ms (Allocations: 362)
+
+
+Started GET "/" for 127.0.0.1 at 2023-06-29 17:16:47 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/akvayli/.rvm/gems/ruby-3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/akvayli/.rvm/gems/ruby-3.0.0/gems/railties-7.0.5/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.0ms | Allocations: 727)
+Completed 200 OK in 34ms (Views: 12.4ms | ActiveRecord: 0.0ms | Allocations: 6854)
+
+
+Started PATCH "/identity/password_reset" for 127.0.0.1 at 2023-06-29 17:17:00 +0200
+Processing by Identity::PasswordResetsController#update as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "password_reset"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+Filter chain halted as :set_user rendered or redirected
+Completed 400 Bad Request in 15ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 4549)
+
+
+Started GET "/identity/password_reset/edit?sid=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik1RPT0iLCJleHAiOiIyMDIzLTA2LTI5VDEzOjU4OjEzLjMxMFoiLCJwdXIiOiJwYXNzd29yZF9yZXNldF90b2tlbiJ9fQ%3D%3D--40b5dcab3279dcf533a3f67a2f1bddc1f266f501b50c0e292e98861bd79d0781" for ::1 at 2023-06-29 17:18:03 +0200
+Processing by Identity::PasswordResetsController#edit as HTML
+  Parameters: {"sid"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik1RPT0iLCJleHAiOiIyMDIzLTA2LTI5VDEzOjU4OjEzLjMxMFoiLCJwdXIiOiJwYXNzd29yZF9yZXNldF90b2tlbiJ9fQ==--40b5dcab3279dcf533a3f67a2f1bddc1f266f501b50c0e292e98861bd79d0781"}
+Redirected to http://localhost:3001/resetpassword/edit?sid=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik1RPT0iLCJleHAiOiIyMDIzLTA2LTI5VDEzOjU4OjEzLjMxMFoiLCJwdXIiOiJwYXNzd29yZF9yZXNldF90b2tlbiJ9fQ==--40b5dcab3279dcf533a3f67a2f1bddc1f266f501b50c0e292e98861bd79d0781
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 216)
+
+
+Started POST "/identity/password_reset" for 127.0.0.1 at 2023-06-29 17:18:31 +0200
+Processing by Identity::PasswordResetsController#create as HTML
+  Parameters: {"email"=>"foofooamazigh@gmail.com", "password_reset"=>{"email"=>"foofooamazigh@gmail.com"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."verified" = $2 LIMIT $3[0m  [["email", "foofooamazigh@gmail.com"], ["verified", true], ["LIMIT", 1]]
+  ↳ app/controllers/identity/password_resets_controller.rb:11:in `create'
+[ActiveJob] Enqueued ActionMailer::MailDeliveryJob (Job ID: d2fa3b87-d965-4a7e-94f5-bd0dfa6bb98f) to Async(default) with arguments: "UserMailer", "password_reset", "deliver_now", {:params=>{:user=>#<GlobalID:0x00007f167c674078 @uri=#<URI::GID gid://back/User/2>>}, :args=>[]}
+Completed 204 No Content in 61ms (ActiveRecord: 6.7ms | Allocations: 26660)
+
+
+[ActiveJob] [ActionMailer::MailDeliveryJob] [d2fa3b87-d965-4a7e-94f5-bd0dfa6bb98f]   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [ActionMailer::MailDeliveryJob] [d2fa3b87-d965-4a7e-94f5-bd0dfa6bb98f] Performing ActionMailer::MailDeliveryJob (Job ID: d2fa3b87-d965-4a7e-94f5-bd0dfa6bb98f) from Async(default) enqueued at 2023-06-29T15:18:31Z with arguments: "UserMailer", "password_reset", "deliver_now", {:params=>{:user=>#<GlobalID:0x00007f1688ce1dc8 @uri=#<URI::GID gid://back/User/2>>}, :args=>[]}
+[ActiveJob] [ActionMailer::MailDeliveryJob] [d2fa3b87-d965-4a7e-94f5-bd0dfa6bb98f]   [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActionMailer::MailDeliveryJob] [d2fa3b87-d965-4a7e-94f5-bd0dfa6bb98f]   ↳ app/mailers/user_mailer.rb:4:in `password_reset'
+[ActiveJob] [ActionMailer::MailDeliveryJob] [d2fa3b87-d965-4a7e-94f5-bd0dfa6bb98f]   [1m[36mPasswordResetToken Create (2.5ms)[0m  [1m[32mINSERT INTO "password_reset_tokens" ("user_id") VALUES ($1) RETURNING "id"[0m  [["user_id", 2]]
+[ActiveJob] [ActionMailer::MailDeliveryJob] [d2fa3b87-d965-4a7e-94f5-bd0dfa6bb98f]   ↳ app/mailers/user_mailer.rb:4:in `password_reset'
+[ActiveJob] [ActionMailer::MailDeliveryJob] [d2fa3b87-d965-4a7e-94f5-bd0dfa6bb98f]   [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActionMailer::MailDeliveryJob] [d2fa3b87-d965-4a7e-94f5-bd0dfa6bb98f]   ↳ app/mailers/user_mailer.rb:4:in `password_reset'
+[ActiveJob] [ActionMailer::MailDeliveryJob] [d2fa3b87-d965-4a7e-94f5-bd0dfa6bb98f]   Rendering layout layouts/mailer.html.erb
+[ActiveJob] [ActionMailer::MailDeliveryJob] [d2fa3b87-d965-4a7e-94f5-bd0dfa6bb98f]   Rendering user_mailer/password_reset.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::MailDeliveryJob] [d2fa3b87-d965-4a7e-94f5-bd0dfa6bb98f]   Rendered user_mailer/password_reset.html.erb within layouts/mailer (Duration: 2.6ms | Allocations: 350)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [d2fa3b87-d965-4a7e-94f5-bd0dfa6bb98f]   Rendered layout layouts/mailer.html.erb (Duration: 4.6ms | Allocations: 618)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [d2fa3b87-d965-4a7e-94f5-bd0dfa6bb98f] UserMailer#password_reset: processed outbound mail in 101.6ms
+[ActiveJob] [ActionMailer::MailDeliveryJob] [d2fa3b87-d965-4a7e-94f5-bd0dfa6bb98f] Delivered mail 649da0c7bb8ad_2a1d51cc3661f@akvayli.mail (894.3ms)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [d2fa3b87-d965-4a7e-94f5-bd0dfa6bb98f] Date: Thu, 29 Jun 2023 17:18:31 +0200
+From: adlisbook.contact@gmail.com
+To: foofooamazigh@gmail.com
+Message-ID: <649da0c7bb8ad_2a1d51cc3661f@akvayli.mail>
+Subject: Reset your password
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <p>Hey there,</p>
+
+<p>Can't remember your password for <strong>foofooamazigh@gmail.com</strong>? That's OK, it happens. Just hit the link below to set a new one.</p>
+
+<p><a href="http://localhost:3000/identity/password_reset/edit?sid=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik1nPT0iLCJleHAiOiIyMDIzLTA2LTI5VDE1OjM4OjMxLjczOFoiLCJwdXIiOiJwYXNzd29yZF9yZXNldF90b2tlbiJ9fQ%3D%3D--80448dd00b82a7d5b8b16361754c4f5ba927ea2ffb518a2ab21bccfbc0a61471">Reset my password</a></p>
+
+<p>If you did not request a password reset you can safely ignore this email, it expires in 20 minutes. Only someone with access to this email account can reset your password.</p>
+
+<hr>
+
+<p>Have questions or need help? Just reply to this email and our support team will help you sort it out.</p>
+
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::MailDeliveryJob] [d2fa3b87-d965-4a7e-94f5-bd0dfa6bb98f] Performed ActionMailer::MailDeliveryJob (Job ID: d2fa3b87-d965-4a7e-94f5-bd0dfa6bb98f) from Async(default) in 1006.08ms
+Started GET "/identity/password_reset/edit?sid=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik1nPT0iLCJleHAiOiIyMDIzLTA2LTI5VDE1OjM4OjMxLjczOFoiLCJwdXIiOiJwYXNzd29yZF9yZXNldF90b2tlbiJ9fQ%3D%3D--80448dd00b82a7d5b8b16361754c4f5ba927ea2ffb518a2ab21bccfbc0a61471" for ::1 at 2023-06-29 17:18:42 +0200
+Processing by Identity::PasswordResetsController#edit as HTML
+  Parameters: {"sid"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik1nPT0iLCJleHAiOiIyMDIzLTA2LTI5VDE1OjM4OjMxLjczOFoiLCJwdXIiOiJwYXNzd29yZF9yZXNldF90b2tlbiJ9fQ==--80448dd00b82a7d5b8b16361754c4f5ba927ea2ffb518a2ab21bccfbc0a61471"}
+Redirected to http://localhost:3001/resetpassword/edit?sid=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik1nPT0iLCJleHAiOiIyMDIzLTA2LTI5VDE1OjM4OjMxLjczOFoiLCJwdXIiOiJwYXNzd29yZF9yZXNldF90b2tlbiJ9fQ==--80448dd00b82a7d5b8b16361754c4f5ba927ea2ffb518a2ab21bccfbc0a61471
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 110)
+
+
+Started PATCH "/identity/password_reset" for 127.0.0.1 at 2023-06-29 17:18:56 +0200
+Processing by Identity::PasswordResetsController#update as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "password_reset"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+Filter chain halted as :set_user rendered or redirected
+Completed 400 Bad Request in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 153)
+
+
+Started PATCH "/identity/password_reset" for 127.0.0.1 at 2023-06-29 17:21:45 +0200
+Processing by Identity::PasswordResetsController#update as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "password_reset"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+Filter chain halted as :set_user rendered or redirected
+Completed 400 Bad Request in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 151)
+
+
+Started PATCH "/identity/password_reset" for 127.0.0.1 at 2023-06-29 17:23:04 +0200
+Processing by Identity::PasswordResetsController#update as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "password_reset"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+Filter chain halted as :set_user rendered or redirected
+Completed 400 Bad Request in 6ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2018)
+
+
+Started PATCH "/identity/password_reset" for 127.0.0.1 at 2023-06-29 17:23:08 +0200
+Processing by Identity::PasswordResetsController#update as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "password_reset"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+Filter chain halted as :set_user rendered or redirected
+Completed 400 Bad Request in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 152)
+
+
+Started PATCH "/identity/password_reset" for 127.0.0.1 at 2023-06-29 17:24:05 +0200
+Processing by Identity::PasswordResetsController#update as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "password_reset"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+Filter chain halted as :set_user rendered or redirected
+Completed 400 Bad Request in 2ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 152)
+
+
+Started PATCH "/identity/password_reset" for 127.0.0.1 at 2023-06-29 17:25:42 +0200
+Processing by Identity::PasswordResetsController#update as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "password_reset"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+Error: ActiveSupport::MessageVerifier::InvalidSignature
+Filter chain halted as :set_user rendered or redirected
+Completed 400 Bad Request in 6ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 2036)
+
+
+Started PATCH "/identity/password_reset" for 127.0.0.1 at 2023-06-29 17:26:01 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Identity::PasswordResetsController#update as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "password_reset"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+Error: ActiveSupport::MessageVerifier::InvalidSignature
+Filter chain halted as :set_user rendered or redirected
+Completed 400 Bad Request in 16ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 4606)
+
+
+Started POST "/identity/password_reset" for 127.0.0.1 at 2023-06-29 17:28:38 +0200
+Processing by Identity::PasswordResetsController#create as */*
+  Parameters: {"email"=>"foofooamazigh@gmail.com", "password_reset"=>{"email"=>"foofooamazigh@gmail.com"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."verified" = $2 LIMIT $3[0m  [["email", "foofooamazigh@gmail.com"], ["verified", true], ["LIMIT", 1]]
+  ↳ app/controllers/identity/password_resets_controller.rb:11:in `create'
+[ActiveJob] Enqueued ActionMailer::MailDeliveryJob (Job ID: 0dcc97e0-f243-431c-befb-426c0e60d627) to Async(default) with arguments: "UserMailer", "password_reset", "deliver_now", {:params=>{:user=>#<GlobalID:0x00007f16151453c0 @uri=#<URI::GID gid://back/User/2>>}, :args=>[]}
+Completed 204 No Content in 76ms (ActiveRecord: 7.1ms | Allocations: 45528)
+
+
+[ActiveJob] [ActionMailer::MailDeliveryJob] [0dcc97e0-f243-431c-befb-426c0e60d627]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [ActionMailer::MailDeliveryJob] [0dcc97e0-f243-431c-befb-426c0e60d627] Performing ActionMailer::MailDeliveryJob (Job ID: 0dcc97e0-f243-431c-befb-426c0e60d627) from Async(default) enqueued at 2023-06-29T15:28:38Z with arguments: "UserMailer", "password_reset", "deliver_now", {:params=>{:user=>#<GlobalID:0x00007f1615187fb8 @uri=#<URI::GID gid://back/User/2>>}, :args=>[]}
+[ActiveJob] [ActionMailer::MailDeliveryJob] [0dcc97e0-f243-431c-befb-426c0e60d627]   [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActionMailer::MailDeliveryJob] [0dcc97e0-f243-431c-befb-426c0e60d627]   ↳ app/mailers/user_mailer.rb:4:in `password_reset'
+[ActiveJob] [ActionMailer::MailDeliveryJob] [0dcc97e0-f243-431c-befb-426c0e60d627]   [1m[36mPasswordResetToken Create (1.5ms)[0m  [1m[32mINSERT INTO "password_reset_tokens" ("user_id") VALUES ($1) RETURNING "id"[0m  [["user_id", 2]]
+[ActiveJob] [ActionMailer::MailDeliveryJob] [0dcc97e0-f243-431c-befb-426c0e60d627]   ↳ app/mailers/user_mailer.rb:4:in `password_reset'
+[ActiveJob] [ActionMailer::MailDeliveryJob] [0dcc97e0-f243-431c-befb-426c0e60d627]   [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActionMailer::MailDeliveryJob] [0dcc97e0-f243-431c-befb-426c0e60d627]   ↳ app/mailers/user_mailer.rb:4:in `password_reset'
+[ActiveJob] [ActionMailer::MailDeliveryJob] [0dcc97e0-f243-431c-befb-426c0e60d627]   Rendering layout layouts/mailer.html.erb
+[ActiveJob] [ActionMailer::MailDeliveryJob] [0dcc97e0-f243-431c-befb-426c0e60d627]   Rendering user_mailer/password_reset.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::MailDeliveryJob] [0dcc97e0-f243-431c-befb-426c0e60d627]   Rendered user_mailer/password_reset.html.erb within layouts/mailer (Duration: 3.2ms | Allocations: 611)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [0dcc97e0-f243-431c-befb-426c0e60d627]   Rendered layout layouts/mailer.html.erb (Duration: 5.0ms | Allocations: 888)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [0dcc97e0-f243-431c-befb-426c0e60d627] UserMailer#password_reset: processed outbound mail in 80.1ms
+[ActiveJob] [ActionMailer::MailDeliveryJob] [0dcc97e0-f243-431c-befb-426c0e60d627] Delivered mail 649da326777b8_330550dc33721@akvayli.mail (485.0ms)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [0dcc97e0-f243-431c-befb-426c0e60d627] Date: Thu, 29 Jun 2023 17:28:38 +0200
+From: adlisbook.contact@gmail.com
+To: foofooamazigh@gmail.com
+Message-ID: <649da326777b8_330550dc33721@akvayli.mail>
+Subject: Reset your password
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <p>Hey there,</p>
+
+<p>Can't remember your password for <strong>foofooamazigh@gmail.com</strong>? That's OK, it happens. Just hit the link below to set a new one.</p>
+
+<p><a href="http://localhost:3000/identity/password_reset/edit?sid=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik13PT0iLCJleHAiOiIyMDIzLTA2LTI5VDE1OjQ4OjM4LjQ1NVoiLCJwdXIiOiJwYXNzd29yZF9yZXNldF90b2tlbiJ9fQ%3D%3D--d3b51dc91bfc1c759453c92e2cebf64cf80533a12d80e553fd47ae7c9323393e">Reset my password</a></p>
+
+<p>If you did not request a password reset you can safely ignore this email, it expires in 20 minutes. Only someone with access to this email account can reset your password.</p>
+
+<hr>
+
+<p>Have questions or need help? Just reply to this email and our support team will help you sort it out.</p>
+
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::MailDeliveryJob] [0dcc97e0-f243-431c-befb-426c0e60d627] Performed ActionMailer::MailDeliveryJob (Job ID: 0dcc97e0-f243-431c-befb-426c0e60d627) from Async(default) in 579.19ms
+Started GET "/identity/password_reset/edit?sid=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik13PT0iLCJleHAiOiIyMDIzLTA2LTI5VDE1OjQ4OjM4LjQ1NVoiLCJwdXIiOiJwYXNzd29yZF9yZXNldF90b2tlbiJ9fQ%3D%3D--d3b51dc91bfc1c759453c92e2cebf64cf80533a12d80e553fd47ae7c9323393e" for ::1 at 2023-06-29 17:29:34 +0200
+Processing by Identity::PasswordResetsController#edit as HTML
+  Parameters: {"sid"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik13PT0iLCJleHAiOiIyMDIzLTA2LTI5VDE1OjQ4OjM4LjQ1NVoiLCJwdXIiOiJwYXNzd29yZF9yZXNldF90b2tlbiJ9fQ==--d3b51dc91bfc1c759453c92e2cebf64cf80533a12d80e553fd47ae7c9323393e"}
+Redirected to http://localhost:3001/resetpassword/edit?sid=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik13PT0iLCJleHAiOiIyMDIzLTA2LTI5VDE1OjQ4OjM4LjQ1NVoiLCJwdXIiOiJwYXNzd29yZF9yZXNldF90b2tlbiJ9fQ==--d3b51dc91bfc1c759453c92e2cebf64cf80533a12d80e553fd47ae7c9323393e
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 166)
+
+
+Started PUT "/identity/password_reset" for 127.0.0.1 at 2023-06-29 17:30:28 +0200
+Processing by Identity::PasswordResetsController#update as */*
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "password_reset"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+Error: ActiveSupport::MessageVerifier::InvalidSignature
+Filter chain halted as :set_user rendered or redirected
+Completed 400 Bad Request in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 167)
+
+
+Started PUT "/identity/password_reset" for 127.0.0.1 at 2023-06-29 17:39:22 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Identity::PasswordResetsController#update as */*
+  Parameters: {"sid"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik13PT0iLCJleHAiOiIyMDIzLTA2LTI5VDE1OjQ4OjM4LjQ1NVoiLCJwdXIiOiJwYXNzd29yZF9yZXNldF90b2tlbiJ9fQ==--d3b51dc91bfc1c759453c92e2cebf64cf80533a12d80e553fd47ae7c9323393e", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "password_reset"=>{"sid"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik13PT0iLCJleHAiOiIyMDIzLTA2LTI5VDE1OjQ4OjM4LjQ1NVoiLCJwdXIiOiJwYXNzd29yZF9yZXNldF90b2tlbiJ9fQ==--d3b51dc91bfc1c759453c92e2cebf64cf80533a12d80e553fd47ae7c9323393e", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}}
+  [1m[36mPasswordResetToken Load (0.7ms)[0m  [1m[34mSELECT "password_reset_tokens".* FROM "password_reset_tokens" WHERE "password_reset_tokens"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/identity/password_resets_controller.rb:28:in `set_user'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/identity/password_resets_controller.rb:28:in `set_user'
+[31mUnpermitted parameters: :sid, :password_reset. Context: { controller: Identity::PasswordResetsController, action: update, request: #<ActionDispatch::Request:0x00007fe04caa0df0>, params: {"sid"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik13PT0iLCJleHAiOiIyMDIzLTA2LTI5VDE1OjQ4OjM4LjQ1NVoiLCJwdXIiOiJwYXNzd29yZF9yZXNldF90b2tlbiJ9fQ==--d3b51dc91bfc1c759453c92e2cebf64cf80533a12d80e553fd47ae7c9323393e", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "controller"=>"identity/password_resets", "action"=>"update", "password_reset"=>{"sid"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik13PT0iLCJleHAiOiIyMDIzLTA2LTI5VDE1OjQ4OjM4LjQ1NVoiLCJwdXIiOiJwYXNzd29yZF9yZXNldF90b2tlbiJ9fQ==--d3b51dc91bfc1c759453c92e2cebf64cf80533a12d80e553fd47ae7c9323393e", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}} }[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/identity/password_resets_controller.rb:19:in `update'
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "foofooamazigh@gmail.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/identity/password_resets_controller.rb:19:in `update'
+  [1m[36mUser Update (1.4ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["password_digest", "[FILTERED]"], ["updated_at", "2023-06-29 15:39:23.511413"], ["id", 2]]
+  ↳ app/controllers/identity/password_resets_controller.rb:19:in `update'
+  [1m[36mSession Delete All (1.3ms)[0m  [1m[31mDELETE FROM "sessions" WHERE "sessions"."user_id" = $1 AND "sessions"."id" IS NOT NULL[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:21:in `block in <class:User>'
+  [1m[36mTRANSACTION (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/identity/password_resets_controller.rb:19:in `update'
+  [1m[36mPasswordResetToken Delete All (2.7ms)[0m  [1m[31mDELETE FROM "password_reset_tokens" WHERE "password_reset_tokens"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/identity/password_resets_controller.rb:38:in `revoke_tokens'
+Completed 200 OK in 514ms (Views: 0.9ms | ActiveRecord: 23.7ms | Allocations: 70565)
+
+
+Started POST "/identity/password_reset" for 127.0.0.1 at 2023-06-29 17:43:21 +0200
+Processing by Identity::PasswordResetsController#create as HTML
+  Parameters: {"email"=>"foofooamazigh@gmail.com", "password_reset"=>{"email"=>"foofooamazigh@gmail.com"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 AND "users"."verified" = $2 LIMIT $3[0m  [["email", "foofooamazigh@gmail.com"], ["verified", true], ["LIMIT", 1]]
+  ↳ app/controllers/identity/password_resets_controller.rb:11:in `create'
+[ActiveJob] Enqueued ActionMailer::MailDeliveryJob (Job ID: 2e5d9c44-7d78-4762-a789-d052fbb3d6c1) to Async(default) with arguments: "UserMailer", "password_reset", "deliver_now", {:params=>{:user=>#<GlobalID:0x00007fe05cd5d088 @uri=#<URI::GID gid://back/User/2>>}, :args=>[]}
+Completed 204 No Content in 16ms (ActiveRecord: 0.4ms | Allocations: 5284)
+
+
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2e5d9c44-7d78-4762-a789-d052fbb3d6c1]   [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2e5d9c44-7d78-4762-a789-d052fbb3d6c1] Performing ActionMailer::MailDeliveryJob (Job ID: 2e5d9c44-7d78-4762-a789-d052fbb3d6c1) from Async(default) enqueued at 2023-06-29T15:43:21Z with arguments: "UserMailer", "password_reset", "deliver_now", {:params=>{:user=>#<GlobalID:0x00007fe05cd9fa00 @uri=#<URI::GID gid://back/User/2>>}, :args=>[]}
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2e5d9c44-7d78-4762-a789-d052fbb3d6c1]   [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2e5d9c44-7d78-4762-a789-d052fbb3d6c1]   ↳ app/mailers/user_mailer.rb:4:in `password_reset'
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2e5d9c44-7d78-4762-a789-d052fbb3d6c1]   [1m[36mPasswordResetToken Create (1.5ms)[0m  [1m[32mINSERT INTO "password_reset_tokens" ("user_id") VALUES ($1) RETURNING "id"[0m  [["user_id", 2]]
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2e5d9c44-7d78-4762-a789-d052fbb3d6c1]   ↳ app/mailers/user_mailer.rb:4:in `password_reset'
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2e5d9c44-7d78-4762-a789-d052fbb3d6c1]   [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2e5d9c44-7d78-4762-a789-d052fbb3d6c1]   ↳ app/mailers/user_mailer.rb:4:in `password_reset'
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2e5d9c44-7d78-4762-a789-d052fbb3d6c1]   Rendering layout layouts/mailer.html.erb
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2e5d9c44-7d78-4762-a789-d052fbb3d6c1]   Rendering user_mailer/password_reset.html.erb within layouts/mailer
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2e5d9c44-7d78-4762-a789-d052fbb3d6c1]   Rendered user_mailer/password_reset.html.erb within layouts/mailer (Duration: 5.4ms | Allocations: 611)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2e5d9c44-7d78-4762-a789-d052fbb3d6c1]   Rendered layout layouts/mailer.html.erb (Duration: 7.9ms | Allocations: 888)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2e5d9c44-7d78-4762-a789-d052fbb3d6c1] UserMailer#password_reset: processed outbound mail in 60.2ms
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2e5d9c44-7d78-4762-a789-d052fbb3d6c1] Delivered mail 649da69984739_3dab51cc544f1@akvayli.mail (837.7ms)
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2e5d9c44-7d78-4762-a789-d052fbb3d6c1] Date: Thu, 29 Jun 2023 17:43:21 +0200
+From: adlisbook.contact@gmail.com
+To: foofooamazigh@gmail.com
+Message-ID: <649da69984739_3dab51cc544f1@akvayli.mail>
+Subject: Reset your password
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <p>Hey there,</p>
+
+<p>Can't remember your password for <strong>foofooamazigh@gmail.com</strong>? That's OK, it happens. Just hit the link below to set a new one.</p>
+
+<p><a href="http://localhost:3000/identity/password_reset/edit?sid=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik5BPT0iLCJleHAiOiIyMDIzLTA2LTI5VDE2OjAzOjIxLjQ5OFoiLCJwdXIiOiJwYXNzd29yZF9yZXNldF90b2tlbiJ9fQ%3D%3D--7e7d012d8a9badcc7b4c7fe57efde349d6e611115365de4945c0743cf061c90d">Reset my password</a></p>
+
+<p>If you did not request a password reset you can safely ignore this email, it expires in 20 minutes. Only someone with access to this email account can reset your password.</p>
+
+<hr>
+
+<p>Have questions or need help? Just reply to this email and our support team will help you sort it out.</p>
+
+  </body>
+</html>
+
+[ActiveJob] [ActionMailer::MailDeliveryJob] [2e5d9c44-7d78-4762-a789-d052fbb3d6c1] Performed ActionMailer::MailDeliveryJob (Job ID: 2e5d9c44-7d78-4762-a789-d052fbb3d6c1) from Async(default) in 916.8ms
+Started GET "/identity/password_reset/edit?sid=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik5BPT0iLCJleHAiOiIyMDIzLTA2LTI5VDE2OjAzOjIxLjQ5OFoiLCJwdXIiOiJwYXNzd29yZF9yZXNldF90b2tlbiJ9fQ%3D%3D--7e7d012d8a9badcc7b4c7fe57efde349d6e611115365de4945c0743cf061c90d" for ::1 at 2023-06-29 17:43:34 +0200
+Processing by Identity::PasswordResetsController#edit as HTML
+  Parameters: {"sid"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik5BPT0iLCJleHAiOiIyMDIzLTA2LTI5VDE2OjAzOjIxLjQ5OFoiLCJwdXIiOiJwYXNzd29yZF9yZXNldF90b2tlbiJ9fQ==--7e7d012d8a9badcc7b4c7fe57efde349d6e611115365de4945c0743cf061c90d"}
+Redirected to http://localhost:3001/resetpassword/edit?sid=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik5BPT0iLCJleHAiOiIyMDIzLTA2LTI5VDE2OjAzOjIxLjQ5OFoiLCJwdXIiOiJwYXNzd29yZF9yZXNldF90b2tlbiJ9fQ==--7e7d012d8a9badcc7b4c7fe57efde349d6e611115365de4945c0743cf061c90d
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 164)
+
+
+Started GET "/identity/password_reset/edit?sid=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik5BPT0iLCJleHAiOiIyMDIzLTA2LTI5VDE2OjAzOjIxLjQ5OFoiLCJwdXIiOiJwYXNzd29yZF9yZXNldF90b2tlbiJ9fQ%3D%3D--7e7d012d8a9badcc7b4c7fe57efde349d6e611115365de4945c0743cf061c90d" for ::1 at 2023-06-29 17:44:27 +0200
+Processing by Identity::PasswordResetsController#edit as HTML
+  Parameters: {"sid"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik5BPT0iLCJleHAiOiIyMDIzLTA2LTI5VDE2OjAzOjIxLjQ5OFoiLCJwdXIiOiJwYXNzd29yZF9yZXNldF90b2tlbiJ9fQ==--7e7d012d8a9badcc7b4c7fe57efde349d6e611115365de4945c0743cf061c90d"}
+Redirected to http://localhost:3001/resetpassword/edit?sid=eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik5BPT0iLCJleHAiOiIyMDIzLTA2LTI5VDE2OjAzOjIxLjQ5OFoiLCJwdXIiOiJwYXNzd29yZF9yZXNldF90b2tlbiJ9fQ==--7e7d012d8a9badcc7b4c7fe57efde349d6e611115365de4945c0743cf061c90d
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 110)
+
+
+Started PATCH "/identity/password_reset" for 127.0.0.1 at 2023-06-29 17:44:38 +0200
+Processing by Identity::PasswordResetsController#update as HTML
+  Parameters: {"eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik5BPT0iLCJleHAiOiIyMDIzLTA2LTI5VDE2OjAzOjIxLjQ5OFoiLCJwdXIiOiJwYXNzd29yZF9yZXNldF90b2tlbiJ9fQ"=>"=--7e7d012d8a9badcc7b4c7fe57efde349d6e611115365de4945c0743cf061c90d"}
+Filter chain halted as :set_user rendered or redirected
+Completed 400 Bad Request in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 170)
+
+
+Started PATCH "/identity/password_reset" for 127.0.0.1 at 2023-06-29 17:45:51 +0200
+Processing by Identity::PasswordResetsController#update as HTML
+  Parameters: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "sid"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik5BPT0iLCJleHAiOiIyMDIzLTA2LTI5VDE2OjAzOjIxLjQ5OFoiLCJwdXIiOiJwYXNzd29yZF9yZXNldF90b2tlbiJ9fQ==--7e7d012d8a9badcc7b4c7fe57efde349d6e611115365de4945c0743cf061c90d", "password_reset"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "sid"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik5BPT0iLCJleHAiOiIyMDIzLTA2LTI5VDE2OjAzOjIxLjQ5OFoiLCJwdXIiOiJwYXNzd29yZF9yZXNldF90b2tlbiJ9fQ==--7e7d012d8a9badcc7b4c7fe57efde349d6e611115365de4945c0743cf061c90d"}}
+  [1m[36mPasswordResetToken Load (0.5ms)[0m  [1m[34mSELECT "password_reset_tokens".* FROM "password_reset_tokens" WHERE "password_reset_tokens"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/identity/password_resets_controller.rb:28:in `set_user'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/identity/password_resets_controller.rb:28:in `set_user'
+[31mUnpermitted parameters: :sid, :password_reset. Context: { controller: Identity::PasswordResetsController, action: update, request: #<ActionDispatch::Request:0x00007fe05d1e1230>, params: {"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "sid"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik5BPT0iLCJleHAiOiIyMDIzLTA2LTI5VDE2OjAzOjIxLjQ5OFoiLCJwdXIiOiJwYXNzd29yZF9yZXNldF90b2tlbiJ9fQ==--7e7d012d8a9badcc7b4c7fe57efde349d6e611115365de4945c0743cf061c90d", "controller"=>"identity/password_resets", "action"=>"update", "password_reset"=>{"password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "sid"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6Ik5BPT0iLCJleHAiOiIyMDIzLTA2LTI5VDE2OjAzOjIxLjQ5OFoiLCJwdXIiOiJwYXNzd29yZF9yZXNldF90b2tlbiJ9fQ==--7e7d012d8a9badcc7b4c7fe57efde349d6e611115365de4945c0743cf061c90d"}} }[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/identity/password_resets_controller.rb:19:in `update'
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 AND "users"."id" != $2 LIMIT $3[0m  [["email", "foofooamazigh@gmail.com"], ["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/identity/password_resets_controller.rb:19:in `update'
+  [1m[36mUser Update (0.7ms)[0m  [1m[33mUPDATE "users" SET "password_digest" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["password_digest", "[FILTERED]"], ["updated_at", "2023-06-29 15:45:52.163357"], ["id", 2]]
+  ↳ app/controllers/identity/password_resets_controller.rb:19:in `update'
+  [1m[36mSession Delete All (0.6ms)[0m  [1m[31mDELETE FROM "sessions" WHERE "sessions"."user_id" = $1 AND "sessions"."id" IS NOT NULL[0m  [["user_id", 2]]
+  ↳ app/models/user.rb:21:in `block in <class:User>'
+  [1m[36mTRANSACTION (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/identity/password_resets_controller.rb:19:in `update'
+  [1m[36mPasswordResetToken Delete All (2.1ms)[0m  [1m[31mDELETE FROM "password_reset_tokens" WHERE "password_reset_tokens"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/identity/password_resets_controller.rb:38:in `revoke_tokens'
+Completed 200 OK in 428ms (Views: 1.1ms | ActiveRecord: 8.1ms | Allocations: 5098)
+
+
+Started POST "/sign_in" for 127.0.0.1 at 2023-06-29 17:47:36 +0200
+Processing by SessionsController#create as HTML
+  Parameters: {"email"=>"foofooamazigh@gmail.com", "password"=>"[FILTERED]", "session"=>{}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "foofooamazigh@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:19:in `create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/sessions_controller.rb:22:in `create'
+  [1m[36mSession Create (1.2ms)[0m  [1m[32mINSERT INTO "sessions" ("expires_at", "user_id", "user_agent", "ip_address", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["expires_at", "2023-06-29 18:47:36.798665"], ["user_id", 2], ["user_agent", "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36"], ["ip_address", "127.0.0.1"], ["created_at", "2023-06-29 15:47:36.811489"], ["updated_at", "2023-06-29 15:47:36.811489"]]
+  ↳ app/controllers/sessions_controller.rb:22:in `create'
+  [1m[36mTRANSACTION (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/sessions_controller.rb:22:in `create'
+Completed 201 Created in 300ms (Views: 0.2ms | ActiveRecord: 3.6ms | Allocations: 17120)
+
+
