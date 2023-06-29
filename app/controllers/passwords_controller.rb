@@ -5,7 +5,8 @@ class PasswordsController < ApplicationController
     if !@user.authenticate(params[:current_password])
       render json: { error: "The current password you entered is incorrect" }, status: :bad_request
     elsif @user.update(user_params)
-      render json: @user
+      @user.sessions.delete_all
+      render json: { message: "User updated successfully" }, status: :ok
     else
       render json: @user.errors, status: :unprocessable_entity
     end

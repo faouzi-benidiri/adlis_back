@@ -3,14 +3,13 @@ class Identity::EmailsController < ApplicationController
 
   # Met à jour l'adresse e-mail de l'utilisateur
   def update
-    if !@user.authenticate(params[:current_password])
-      render json: { error: "The password you entered is incorrect" }, status: :bad_request
-    elsif @user.update(email: params[:email])
+    if @user.update(email: params[:email])
       render_show # Appelle la méthode pour afficher les détails de l'utilisateur
     else
       render json: @user.errors, status: :unprocessable_entity
     end
   end
+  
 
   private
     # Récupère l'utilisateur actuel

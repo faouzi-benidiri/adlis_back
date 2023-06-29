@@ -38,3 +38,4 @@
 /tmp/cache/bootsnap/
 /config/master.key
 .env
+/log

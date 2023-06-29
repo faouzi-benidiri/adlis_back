@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   post "sign_in", to: "sessions#create"
   post "sign_up", to: "registrations#create"
   delete "users/:id", to: "registrations#destroy"
+  put "users/:id", to: "registrations#update"
   resources :sessions, only: [:index, :show, :destroy]
   resource  :password, only: [:edit, :update]
   namespace :identity do
