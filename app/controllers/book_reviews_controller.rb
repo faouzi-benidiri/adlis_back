@@ -3,7 +3,7 @@ class BookReviewsController < ApplicationController
 
       def index
         book_id = params[:book_id]
-        book_reviews = BookReview.where(book_id: book_id).pluck(:user_username, :review )
+        book_reviews = BookReview.where( book_id: book_id).pluck(:id, :user_id, :user_username, :review )
       
         render json: book_reviews
       end

@@ -17,22 +17,17 @@ class SessionsController < ApplicationController
   # Crée une nouvelle session pour l'utilisateur
   def create
     user = User.find_by(email: params[:email])
-
+  
     if user && user.authenticate(params[:password])
-      active_session = user.sessions.find_by("expires_at > ?", Time.now)
-
-      if active_session
-        render json: { error: "User already has an active session" }, status: :unprocessable_entity
-      else
-        @session = user.sessions.create!(expires_at: 3.hours.from_now)
-        token = response.set_header "token", @session.signed_id
-
-        render json: {token: token, session_id: @session.id }, status: :created
-      end
+      @session = user.sessions.create!(expires_at: 3.hours.from_now)
+      token = @session.signed_id
+  
+      render json: { token: token, session_id: @session.id, user_id: user.id }, status: :created
     else
       render json: { error: "That email or password is incorrect" }, status: :unauthorized
     end
   end
+  
   
   # Détruit une session existante
   def destroy
