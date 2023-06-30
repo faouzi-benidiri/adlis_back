@@ -4,7 +4,7 @@ class Identity::PasswordResetsController < ApplicationController
   before_action :set_user, only: :update
 
   def edit
-    redirect_to "http://localhost:3001/resetpassword/edit?sid=#{params[:sid]}"
+    redirect_to "https://adlis.netlify.app/resetpassword/edit?sid=#{params[:sid]}"
   end
 
   def create
