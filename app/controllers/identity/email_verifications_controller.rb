@@ -5,8 +5,11 @@ class Identity::EmailVerificationsController < ApplicationController
 
   # Affiche l'action de vérification de l'e-mail
   def show
-    @user.update!(verified: true) 
-    head(:no_content) 
+    if @user.update(verified: true)
+      render json: { status: 'success', message: 'Votre e-mail a été vérifié avec succès.' }
+    else
+      render json: { status: 'failure', error: 'Une erreur s\'est produite lors de la vérification de l\'e-mail.' }
+    end
   end
 
   # Envoie l'e-mail de vérification à l'utilisateur actuel

@@ -4,16 +4,22 @@ class RegistrationsController < ApplicationController
   # Crée un nouvel utilisateur
   def create
     @user = User.new(user_params)
-
-    if @user.save
+  
+    existing_user = User.find_by(email: @user.email)
+  
+    if existing_user
+      render json: { error: "User already exists" }, status: :unprocessable_entity
+    elsif @user.save
       @session = @user.sessions.create!(expires_at: 3.hours.from_now)
       token = response.set_header "token", @session.signed_id
       send_email_verification
-      render json: {token: token, user_id: @user.id, session_id: @session.id, user_mail: @user.email }, status: :created
+      render json: { token: token, user_id: @user.id, session_id: @session.id }, status: :created
     else
       render json: @user.errors, status: :unprocessable_entity
     end
   end
+  
+  
 
     # Met à jour les informations de l'utilisateur actuel
     def update
@@ -26,8 +32,14 @@ class RegistrationsController < ApplicationController
 
   # Détruit l'utilisateur actuel
   def destroy
-    if Current.user.destroy
-      render json: { message: "User successfully destroyed" }
+    user = Current.user
+  
+    if user.destroy
+      # Supprimer les autres données associées à l'utilisateur
+      BookReview.where(user_id: user.id).destroy_all
+      BookUserRelation.where(user_id: user.id).destroy_all
+  
+      render json: { message: "User and associated data successfully destroyed" }
     else
       render json: { error: "Failed to destroy user" }, status: :unprocessable_entity
     end
