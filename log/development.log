@@ -29692,3 +29692,8 @@ Processing by SessionsController#create as HTML
 Completed 201 Created in 300ms (Views: 0.2ms | ActiveRecord: 3.6ms | Allocations: 17120)
 
 
+Started GET "/ws" for ::1 at 2023-06-30 12:21:00 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/ws"):
+  
