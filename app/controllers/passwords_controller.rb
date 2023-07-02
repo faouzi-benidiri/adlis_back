@@ -1,6 +1,7 @@
 class PasswordsController < ApplicationController
   before_action :set_user
 
+  # Update the user's password
   def update
     if !@user.authenticate(params[:current_password])
       render json: { error: "The current password you entered is incorrect" }, status: :bad_request
@@ -13,10 +14,12 @@ class PasswordsController < ApplicationController
   end
 
   private
+    # Set the current user
     def set_user
       @user = Current.user
     end
 
+    # Define the allowed user parameters for password update
     def user_params
       params.permit(:password, :password_confirmation)
     end

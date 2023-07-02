@@ -1,26 +1,21 @@
-<p>Hey there,</p>
-
+<p>Bonjour,</p>
 <p>
-  This is to confirm that <%= @user.email %> is the email you want to use on
-  your account. If you ever lose your password, that's where we'll email a reset
-  link.
+  Ceci est pour confirmer que <%= @user.email %> est l'adresse e-mail que vous
+  souhaitez utiliser pour votre compte. Si jamais vous perdez votre mot de
+  passe, c'est à cette adresse que nous enverrons un lien de réinitialisation.
 </p>
-
 <p>
   <strong
-    >You must hit the link below to confirm that you received this
-    email.</strong
+    >Vous devez cliquer sur le lien ci-dessous pour confirmer que vous avez bien
+    reçu cet email.</strong
   >
 </p>
-
 <p>
-  <%= link_to "Yes, use this email for my account",
+  <%= link_to "Oui, utilisez cette adresse e-mail pour mon compte",
   "http://localhost:3000/confirmed?sid=#{@signed_id}", target: "_blank" %>
 </p>
-
 <hr />
-
 <p>
-  Have questions or need help? Just reply to this email and our support team
-  will help you sort it out.
+  Vous avez des questions ou besoin d'aide ? Répondez simplement à cet email et
+  notre équipe d'assistance vous aidera à régler le problème.
 </p>

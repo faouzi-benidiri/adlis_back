@@ -3,22 +3,22 @@ class Identity::EmailVerificationsController < ApplicationController
 
   before_action :set_user, only: :show
 
-  # Affiche l'action de vérification de l'e-mail
+  # Display the email verification action
   def show
     if @user.update(verified: true)
-      render json: { status: 'success', message: 'Votre e-mail a été vérifié avec succès.' }
+      render json: { status: 'success', message: 'Your email has been successfully verified.' }
     else
-      render json: { status: 'failure', error: 'Une erreur s\'est produite lors de la vérification de l\'e-mail.' }
+      render json: { status: 'failure', error: 'An error occurred while verifying the email.' }
     end
   end
 
-  # Envoie l'e-mail de vérification à l'utilisateur actuel
+  # Send the verification email to the current user
   def create
     UserMailer.with(user: Current.user).email_verification.deliver_later
   end
 
   private
-    # Récupère l'utilisateur associé au jeton de vérification d'e-mail
+    # Get the user associated with the email verification token
     def set_user
       token = EmailVerificationToken.find_signed!(params[:sid]) 
       @user = token.user 

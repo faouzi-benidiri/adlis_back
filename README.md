@@ -1,24 +1,59 @@
-# README
+# Adlis
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Adlis is an application that allows users to browse books, add reviews, and mark them as favorites. It has been developed by **Olivier Maria**, **Zitouni Fadili**, and **Faouzi Benidiri**.
 
-Things you may want to cover:
+## Main Features
 
-* Ruby version
+- **Browse Books:** The application provides a user-friendly interface to explore a vast collection of books.
+- **Create** an Account: Users can create a personal account to access additional features.
+- **Add Reviews:** Registered users can share their reviews on the books they have read.
+- Mark Books as Favorites: Users can bookmark their favorite books and easily find them in their favorites list.
 
-* System dependencies
+## Technologies Used
 
-* Configuration
+- **Backend:** Rails API
+- **Frontend:** React with Tailwind CSS
 
-* Database creation
+## Additional Features
 
-* Database initialization
+Additional features will be added to the application over time.
 
-* How to run the test suite
+## Style and Design
 
-* Services (job queues, cache servers, search engines, etc.)
+The application has been designed with a visually appealing and intuitive user interface. The combination of React and Tailwind CSS ensures a modern and responsive design.
 
-* Deployment instructions
+## Repository Links
 
-* ...
+- Backend API Repository: **this repository**
+- Frontend Repository: [Link to the frontend repository](https://github.com/OlivierMaria/Adlis)
+
+## Running the Application
+
+To run the Adlis application, please follow the instructions below:
+
+### Backend Setup
+
+1. Clone the backend repository and navigate to the project directory.
+2. Install the required dependencies mentioned in the Gemfile by runing `bundle install.`
+3. Set up the PostgreSQL database and ensure that it is running by runing :
+
+- `sudo service postgresql start`
+- `rails db:create`
+- `rails db:migrate`
+
+4. Configure the necessary environment variables (**sendgrid api into .env**)
+5. Start the backend server.
+
+### Frontend Setup
+
+1. Clone the frontend repository and navigate to the project directory.
+2. Install Node.js if not already installed.
+3. Install the required dependencies using the package manager of your choice.
+4. Configure the necessary environment variables **google api**.
+5. Start the frontend development server.
+
+Please refer to the README files in the respective repositories for detailed instructions on setting up the backend and frontend environments.
+
+Access the Adlis application by opening your browser and visiting [http://localhost:3000](http://localhost:3000).
+
+Note: Make sure the backend server is running before starting the frontend server to ensure proper communication between the two.
